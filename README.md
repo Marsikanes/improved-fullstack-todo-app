@@ -86,8 +86,8 @@ improved-fullstack-todo-app/
 
 После выполнения `npm run seed` в базе будут два пользователя:
 
-- **admin@test.com** — пароль `admin123`
-- **user@test.com** — пароль `user123`
+- **admin@test.com** — пароль: `admin123`
+- **user@test.com** — пароль: `user123`
 
 5. **Запустите сервер**
    ```bash
