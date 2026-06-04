@@ -2,7 +2,7 @@
 # 📝 Todo Fullstack App
 
 [![Code Climate](https://codeclimate.com/github/yourusername/improved-fullstack-todo-app/badges/gpa.svg)](https://codeclimate.com/github/yourusername/improved-fullstack-todo-app)
-**Live Demo:** [https://improved-fullstack-todo-app.up.railway.app](https://improved-fullstack-todo-app.up.railway.app)
+**Live Demo:** [https://improved-fullstack-todo-app.up.railway.app](improved-fullstack-todo-app-production.up.railway.app)
 
 Полноценное fullstack-приложение для управления задачами с регистрацией, JWT‑аутентификацией и базой данных SQLite. Сервер на Express генерирует страницы через EJS, а клиентский JavaScript взаимодействует с REST API.
 
