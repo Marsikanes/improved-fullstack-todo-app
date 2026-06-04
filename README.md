@@ -2,7 +2,7 @@
 # 📝 Todo Fullstack App
 
 [![Code Climate](https://codeclimate.com/github/yourusername/improved-fullstack-todo-app/badges/gpa.svg)](https://codeclimate.com/github/yourusername/improved-fullstack-todo-app)
-[![Render Deploy](https://img.shields.io/badge/demo-live-brightgreen)](https://your-app.onrender.com)
+**Live Demo:** [https://improved-fullstack-todo-app.up.railway.app](https://improved-fullstack-todo-app.up.railway.app)
 
 Полноценное fullstack-приложение для управления задачами с регистрацией, JWT‑аутентификацией и базой данных SQLite. Сервер на Express генерирует страницы через EJS, а клиентский JavaScript взаимодействует с REST API.
 
@@ -50,6 +50,15 @@ improved-fullstack-todo-app/
         └── app.js        # клиентская логика
 ```
 
+```
+[ Браузер ] → (HTTP, EJS-шаблоны, fetch API) → [ Express Server (app.js) ]
+                                                        |
+                                                        ├── Маршруты (routes/)
+                                                        ├── Middleware (auth)
+                                                        └── SQLite (database.sqlite)
+```
+Проект выполнен в виде единого Node.js-приложения (монорепозиторий): сервер отдаёт клиентские страницы (EJS) и обслуживает REST API. Логически разделён на фронтенд (views/, public/js) и бэкенд (app.js, routes/, middleware/).
+
 ---
 
 ## ⚙️ Локальный запуск
@@ -68,7 +77,7 @@ improved-fullstack-todo-app/
 3. **Настройте переменные окружения**
    Создайте файл `.env` на основе `.env.example`:
    ```env
-   JWT_SECRET=ваш_супер_секретный_ключ
+   JWT_SECRET=super_secret_key_change_me
    PORT=3000
    ```
 
