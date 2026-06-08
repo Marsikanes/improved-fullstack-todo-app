@@ -7,7 +7,14 @@
 
 [![Maintainability](https://img.shields.io/badge/Maintainability-A%2B-success)](https://improved-fullstack-todo-app.up.railway.app)
 
-Полноценное fullstack-приложение для управления задачами с безопасной аутентификацией (httpOnly cookies, refresh token) и базой данных SQLite.
+##  Тестовые пользователи для пользования
+
+| Email            | Пароль    |
+| ---------------- | --------- |
+| admin@test.com   | admin123  |
+| user@test.com    | user123   |
+
+## Полноценное fullstack-приложение для управления задачами с безопасной аутентификацией (httpOnly cookies, refresh token) и базой данных SQLite.
 
 ## Демонстрация
 
@@ -120,7 +127,7 @@ improved-fullstack-todo-app/
 └── database.sqlite (в .gitignore)
 ```
 
-##  Тестовые пользователи
+##  Тестовые пользователи для пользования
 
 | Email            | Пароль    |
 | ---------------- | --------- |
