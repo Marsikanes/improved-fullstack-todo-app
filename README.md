@@ -75,6 +75,7 @@ npm start
 
 Нажмите Deploy.
 
+```
  API Endpoints
 Метод	URL	Описание	Защита
 POST	/api/register	Регистрация	Нет
@@ -84,6 +85,7 @@ GET	/api/todos	Список задач	Access cookie
 POST	/api/todos	Создать задачу	Access cookie
 PUT	/api/todos/:id	Обновить задачу	Access cookie
 DELETE	/api/todos/:id	Удалить задачу	Access cookie
+```
 
 ## Структура проекта
 ```
