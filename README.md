@@ -110,25 +110,26 @@ npm start
 ## Структура проекта
 ```
 improved-fullstack-todo-app/
-├── app.js                  # точка входа
+├── app.js                     # точка входа сервера
 ├── package.json
 ├── .env.example
-├── seed.js
+├── seed.js                    # ручной посев (опционально)
 ├── middleware/
-│   ├── auth.js             # проверка access токена
-│   └── refresh.js          # проверка refresh токена
+│   ├── verifyAccess.js        # проверка access-токена из куки
+│   └── verifyRefresh.js       # проверка refresh-токена из куки
 ├── routes/
-│   ├── auth.js             # регистрация, вход, выход, обновление
-│   └── todos.js            # CRUD задач
+│   ├── authRoutes.js          # регистрация, вход, выход, обновление токенов
+│   └── todoRoutes.js          # CRUD задач
 ├── views/
 │   ├── login.ejs
 │   ├── register.ejs
 │   └── todos.ejs
 ├── public/
 │   ├── css/
-│   │   └── dark-theme.css
+│   │   └── dark-theme.css     # стили тёмной/светлой темы и кнопки переключения
 │   └── js/
-│       └── app.js
+│       ├── app.js             # клиентская логика задач
+│       └── theme.js           # переключатель тем
 └── database.sqlite (в .gitignore)
 ```
 
