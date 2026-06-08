@@ -1,0 +1,223 @@
+/* Переменные для тёмной темы (по умолчанию)*/
+:root {
+  --bg-primary: #0e1a14;
+  --bg-secondary: #16251d;
+  --bg-input: #1e2f26;
+  --text-primary: #d4e6dc;
+  --text-muted: #a0c0ab;   /* было #7b9b87, стало светлее */
+  --accent: #4caf7c;
+  --accent-hover: #3d8e65;
+  --danger: #c56b6b;
+  --border: #2b3d32;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/*  Переменные для светлой темы (активируется классом .light-theme на body)  */
+body.light-theme {
+  --bg-primary: #f8fcf9;
+  --bg-secondary: #eaf5ef;
+  --bg-input: #ffffff;
+  --text-primary: #1a2e23;
+  --text-muted: #4a6b56;
+  --accent: #2d7a4e;
+  --accent-hover: #23613e;
+  --danger: #b04545;
+  --border: #c8dcd0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Базовые стили (используют переменные)*/
+* {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Навигация */
+.navbar {
+  background-color: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.navbar-brand {
+  color: var(--accent) !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Карточки */
+.card, .container > .card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* Поля ввода */
+.form-control {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+.form-control:focus {
+  background-color: var(--bg-input);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(76, 175, 124, 0.3);
+  color: var(--text-primary);
+}
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+/* Заголовки и подписи (перебиваем Bootstrap) */
+body h2,
+body .form-label,
+body label {
+  color: var(--text-primary) !important;
+}
+
+/* Текст под формой и вообще любой текст внутри .container */
+body p,
+body .text-center {
+  color: var(--text-primary) !important;
+}
+
+/* Ссылки в тексте */
+body p a {
+  color: var(--accent) !important;
+}
+body p a:hover {
+  color: var(--accent-hover) !important;
+}
+
+/* Кнопки */
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  border-radius: 12px;
+  font-weight: 500;
+  padding: 10px 20px;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+.btn-outline-light {
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+.btn-outline-light:hover {
+  background-color: var(--border);
+  color: white;
+}
+.btn-outline-secondary {
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+.btn-outline-secondary:hover {
+  background-color: var(--border);
+  color: white;
+}
+.btn-outline-danger {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+.btn-outline-danger:hover {
+  background-color: var(--danger);
+  color: white;
+}
+
+/* Ссылки */
+a {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Список задач */
+.list-group-item {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px !important;
+  margin-bottom: 8px;
+  padding: 14px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  color: var(--text-primary);
+}
+.list-group-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Чекбокс */
+.form-check-input {
+  background-color: var(--bg-input);
+  border: 2px solid var(--accent);
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.1em;
+}
+.form-check-input:checked {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Текст задачи */
+.todo-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+.todo-text.text-decoration-line-through {
+  color: #c0d8c8 !important;
+}
+
+/* Кнопки внутри задачи */
+.btn-group-sm .btn {
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+}
+
+/* Инпут редактирования */
+.todo-edit-input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--text-primary);
+  padding: 6px 10px;
+}
+
+/* ====== Кнопка переключения темы ====== */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--accent);
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+body.light-theme .todo-text.text-decoration-line-through {
+  color: #2d5a3b !important;   /* насыщенный тёмно-зелёный */
+}
