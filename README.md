@@ -75,17 +75,21 @@ npm start
 
 Нажмите Deploy.
 
-```
- API Endpoints
-Метод	URL	Описание	Защита
-POST	/api/register	Регистрация	Нет
-POST	/api/login	Вход	Нет
-POST	/api/refresh	Обновление access токена	Refresh cookie
-GET	/api/todos	Список задач	Access cookie
-POST	/api/todos	Создать задачу	Access cookie
-PUT	/api/todos/:id	Обновить задачу	Access cookie
-DELETE	/api/todos/:id	Удалить задачу	Access cookie
-```
+## API ENDPOINTS
+
+| Метод   | URL                | Описание                         | Защита                     |
+| ------- | ------------------ | -------------------------------- | -------------------------- |
+| POST    | /api/register      | Регистрация нового пользователя  | Нет                        |
+| POST    | /api/login         | Вход в систему                  | Нет                        |
+| POST    | /api/refresh       | Обновление access-токена        | Refresh cookie             |
+| POST    | /api/logout        | Выход из системы                | Refresh cookie             |
+| GET     | /api/todos         | Список задач пользователя       | Access cookie              |
+| POST    | /api/todos         | Создать новую задачу            | Access cookie              |
+| PUT     | /api/todos/:id     | Обновить текст и/или статус     | Access cookie              |
+| DELETE  | /api/todos/:id     | Удалить задачу                  | Access cookie              |
+
+Дополнительно:
+- `GET /health` – healthcheck для Railway (всегда возвращает 200 OK).
 
 ## Структура проекта
 ```
@@ -114,9 +118,10 @@ improved-fullstack-todo-app/
 
 ##  Тестовые пользователи
 
-| Email    |   	Пароль |
-| admin@test.com	admin123 |
-| user@test.com	user123 |
+| Email            | Пароль    |
+| ---------------- | --------- |
+| admin@test.com   | admin123  |
+| user@test.com    | user123   |
 
 
 ##  Лицензия
