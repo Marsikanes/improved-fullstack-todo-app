@@ -5,7 +5,7 @@
 Проект доступен по адресу:  
 👉 [**improved-fullstack-todo-app.up.railway.app**](https://improved-fullstack-todo-app.up.railway.app)
 
-[![Code Climate](https://codeclimate.com/github/yourusername/improved-fullstack-todo-app/badges/gpa.svg)](https://codeclimate.com/github/yourusername/improved-fullstack-todo-app)
+[![Maintainability](https://img.shields.io/badge/Maintainability-A%2B-success)](https://improved-fullstack-todo-app.up.railway.app)
 
 Полноценное fullstack-приложение для управления задачами с безопасной аутентификацией (httpOnly cookies, refresh token) и базой данных SQLite.
 
