@@ -4,7 +4,7 @@ const Database = require('better-sqlite3');
 
 const db = new Database('database.sqlite');
 
-// Create tables if not exist
+// Создаем таблицу, если те ещё не созданы.
 db.exec(`
   CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -26,7 +26,7 @@ db.exec('DELETE FROM todos');
 db.exec('DELETE FROM users');
 db.exec("DELETE FROM sqlite_sequence WHERE name='users' OR name='todos'");
 
-// Seed users
+// заполняем пользователей
 const adminPass = bcrypt.hashSync('admin123', 10);
 const userPass = bcrypt.hashSync('user123', 10);
 
@@ -34,7 +34,7 @@ const insertUser = db.prepare('INSERT INTO users (name, email, password) VALUES 
 const admin = insertUser.run('Admin', 'admin@test.com', adminPass);
 const user = insertUser.run('User', 'user@test.com', userPass);
 
-// Seed todos
+//Заполняем задачки
 const insertTodo = db.prepare('INSERT INTO todos (user_id, text, completed) VALUES (?, ?, ?)');
 const todosForAdmin = [
   'Review project plan',
