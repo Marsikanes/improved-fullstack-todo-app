@@ -94,9 +94,8 @@ app.use('/api/todos', todoRoutes);
 // 404
 app.use((req, res) => res.status(404).json({ error: 'Not found' }));
 
+app.get('/health', (req, res) => res.status(200).send('OK'));
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
-
-// Health check для Railway
-app.get('/health', (req, res) => res.status(200).send('OK'));
