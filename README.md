@@ -1,11 +1,14 @@
 # Improved Fullstack Todo App
 
+- Полноценное fullstack-приложение для управления задачами с безопасной аутентификацией (httpOnly cookies, refresh token) и базой данных SQLite.
+
 ## Деплой
 
 Проект доступен по адресу:  
 👉 [**improved-fullstack-todo-app.up.railway.app**](https://improved-fullstack-todo-app.up.railway.app)
 
 [![Maintainability](https://img.shields.io/badge/Maintainability-A%2B-success)](https://improved-fullstack-todo-app.up.railway.app)
+
 
 ##  Тестовые пользователи для пользования
 
@@ -14,7 +17,6 @@
 | admin@test.com   | admin123  |
 | user@test.com    | user123   |
 
-## Полноценное fullstack-приложение для управления задачами с безопасной аутентификацией (httpOnly cookies, refresh token) и базой данных SQLite.
 
 ## Демонстрация
 
@@ -77,6 +79,7 @@ npm start
 ```
 Откройте http://localhost:3000
 
+
 ## Деплой на Railway
  - Запушьте проект в GitHub.
 
@@ -85,6 +88,7 @@ npm start
  - В Variables добавьте JWT_SECRET и JWT_REFRESH_SECRET.
 
 Нажмите Deploy.
+
 
 ## API ENDPOINTS
 
@@ -101,6 +105,7 @@ npm start
 
 Дополнительно:
 - `GET /health` – healthcheck для Railway (всегда возвращает 200 OK).
+
 
 ## Структура проекта
 ```
@@ -126,14 +131,6 @@ improved-fullstack-todo-app/
 │       └── app.js
 └── database.sqlite (в .gitignore)
 ```
-
-##  Тестовые пользователи для пользования
-
-| Email            | Пароль    |
-| ---------------- | --------- |
-| admin@test.com   | admin123  |
-| user@test.com    | user123   |
-
 
 ##  Лицензия
 - Проект создан в учебных целях.
