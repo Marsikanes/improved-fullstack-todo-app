@@ -92,6 +92,22 @@ npm start
 
 Нажмите Deploy.
 
+## Архитектура приложения
+
+Проект построен как единое Node.js-приложение (монорепозиторий), где сервер Express отдаёт EJS-шаблоны и обслуживает REST API.
+[ Браузер (клиент) ]
+        │
+        ├── GET/POST запросы (страницы, API)
+        ▼
+[ Express Server (app.js) ]
+        │
+        ├── Маршруты страниц (/login, /register, /todos)
+        ├── API-маршруты (/api/register, /api/login, /api/todos)
+        ├── Middleware auth.js (проверка JWT)
+        │
+        ▼
+[ SQLite Database (database.sqlite) ]
+
 ## Модель данных (ERD)
 ![ER-диаграмма](/erd.png)
 
