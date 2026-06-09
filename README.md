@@ -7,8 +7,11 @@
 Проект доступен по адресу:  
 👉 [**improved-fullstack-todo-app.up.railway.app**](https://improved-fullstack-todo-app.up.railway.app)
 
-[![Maintainability](https://img.shields.io/badge/Maintainability-A%2B-success)](https://improved-fullstack-todo-app.up.railway.app)
+## ВАЖНОЕ ПРИМЕЧАНИЕ
 
+```
+В связи с изменением политики и функциональности сервиса Code Climate (переход на модель Enterprise), публичная оценка качества кода для открытых репозиториев стала недоступна. Вместо бейджа в проекте применены следующие меры контроля качества: единый стиль кода, осмысленные имена переменных, документирование в README, ручное тестирование API.
+```
 
 ##  Тестовые пользователи для пользования
 
