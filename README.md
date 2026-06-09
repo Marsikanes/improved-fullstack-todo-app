@@ -92,6 +92,9 @@ npm start
 
 Нажмите Deploy.
 
+## Модель данных (ERD)
+![ER-диаграмма](/improved-fullstack-todo-app/erd.png)
+
 
 ## API ENDPOINTS
 
