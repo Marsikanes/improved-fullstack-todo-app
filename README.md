@@ -1,8 +1,9 @@
 # Improved Fullstack Todo App
 
-- Полноценное fullstack-приложение для управления задачами с безопасной аутентификацией (httpOnly cookies, refresh token) и базой данных SQLite.
-        Отсылается на работу из репозитория 'https://github.com/practical-tutorials/project-based-learning' на  'https://github.com/dwyl/javascript-todo-list-tutorial' 
-        
+- Полноценное fullstack-приложение для управления задачами с безопасной аутентификацией (httpOnly cookies, refresh token) и базой данных SQLite.   
+
+**Отсылается на работу из репозитория** 'https://github.com/practical-tutorials/project-based-learning' на  'https://github.com/dwyl/javascript-todo-list-tutorial' 
+
 ## Деплой
 
 Проект доступен по адресу:  
